@@ -1,0 +1,38 @@
+\lecture{3}{February 17, 2021}{\PP(\CC)}
+
+To solve the first problem, we'll use the complex numbers instead of the real numbers. To solve the second problem, we'll need to develop \emph{projective spaces}.
+
+\newpage
+\section{Introducing Projective Spaces}
+
+\paragraph{Basic idea} Start with a initial space and add new point to it which keep track of the different ``ways'' of goign off to infinity in a straight line. 
+
+\paragraph{Notation} $\PP^{\text{dimension}}(\text{field})$.
+
+\begin{exmp}[Real projective line]
+	Consider the projective space $\PP^1(\RR)$: this is just $\RR$ plus one additional point ``at infinity''.
+\end{exmp}
+
+\begin{exmp}[Real projective plane]
+	Consider the projective space $\PP^2(\RR)$: this is  $\RR^2$ plus an additional point for each line in  $\RR^2$ through the origin.
+
+	Any two parallel lines in $\RR^2$ intersect in the $\PP^2(\RR)$.
+
+	So, any two lines in $\PP^2(\RR)$ intersect at a point in  $\PP^2(\RR)$
+\end{exmp}
+
+\begin{exmp}[Complex projective line]
+	Consider the projective space $\PP(\CC)$: this is just $\CC$ plus one additional point ``at infinity''.
+\end{exmp}
+
+%\begin{defn}
+%	In $\CC^2$, a \emph{complex line through the origin} is a subset of $\CC^2$, say $A$, satisfying that for all $\lambda \in \CC$ such that  \[
+%		(z, w) \in A \iff (\lambda z, \lambda w) \in A.
+%	\]
+%
+%	(This definition allows $A = \varnothing$, $A = \{0\}$ and $A = \CC^2$, but we will disregard those.)
+%\end{defn}
+
+\begin{defn}
+	In $\CC^2$, a \emph{complex line through the origin} is a subvector space of $\CC^2$ over $\CC$ with dimension $1$.
+\end{defn}

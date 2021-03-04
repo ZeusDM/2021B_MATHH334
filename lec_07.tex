@@ -1,0 +1,58 @@
+\lecture{7}{March 03, 2021}{}
+
+\begin{sk}
+	Using tools from Linear Algebra, we can conclude that given two subspaces $V_1, V_2 \subset V$, \[
+		\dim(V_1 \cap V_2) \ge \dim(V_1) + \dim(V_2) - \dim(V). 
+	\]
+
+	An $(r+1)$-dimensional subspace $\tilde S_1$ of $K^{n+1}$ has codimension $(n+1) - (r+1) = n - r$. And, the associated projective subspace $S_1$ of $\PP^n(K)$ has same codimension. So, the inequality for vector spaces implies the inequality for projective spaces.
+\end{sk}
+
+We will use a lot the connection between vector spaces and projective spaces.
+
+\begin{exmp}
+	Any two projective $2$-spaces in $\PP^3(\RR)$ intersect in at least a (projective) line.
+\end{exmp}
+
+\begin{defn}
+	Let $p \in \PP^n(K)$ --- we may call $p$ a \emph{projective point}, or simply a \emph{point} --- and let $L_p$ be the corresponding line throught the origin in $K^{n+1}$. (\emph{Technically, those are the same, but it is useful to separate them.})
+
+	Then, if $\vec a \in K^{n+1}$, $\vec a \in L_p$, $\vec a \neq \vec 0$, we call  $\vec a$ a \emph{coordinate set for $p$} --- or simply \emph{coordinates for $p$}.
+\end{defn}
+
+An unforunate fact is that a single projective point $p$ doesn't have a unique coordinate set.
+
+\begin{prop}
+	Given two non-zero $\vec a, \vec b \in K^{n+1}$, they are coordinate for the same point in $\PP^n(K)$ if, and only if, there exists $\lambda \in K$ such that \[
+		\vec a = \lambda \cdot \vec b,
+	\]
+	i.e., if $0$, $\vec a$ and $\vec b$ are collinear.
+\end{prop}
+
+\begin{exmp}
+	Let's think about $\PP^2(\RR)$.
+
+	For any point $(x, y, z) \in \RR^3$ such that $z \neq 0$, we can divide by $z$ and get $\left(\frac{x}{z}, \frac{y}{z}, 1\right)$ --- \emph{which represents the same projective point in $\PP^2(\RR)$ as $(x, y, z)$.}
+
+	Therefore, except for the projective points (lines) in the $xy$-plane, we can handle the problem of non-unique representation of projective points by referring to a projective point by the \emph{unique} point in $\RR^3$ with a $1$ in the last coordinate. See \cref{fig:real-projective-plane}.
+
+	So, the plane $z = 1$ (a copy of $\RR^2$) can be naturally identified with the subset of $\PP^2(\RR)$ consisting of projective points that represent lines \emph{not} in the $xy$-plane.
+	The remaining projective points can be identified with a copy of $\PP^1(\RR)$ --- which we usually call \emph{the line at infinity}.
+
+	In general, one can always imagine $\PP^n(K)$ as a copy of $K^n$ together with a copy of $\PP^{n-1}(K)$ \emph{``at infinity''} --- the latter we call \emph{the hyperplane at infinity}.
+\end{exmp}
+
+\begin{rem}
+	There is no preferred hyperplane at infinity. In our example, the choice of the plane $z = 1$ was completely arbitrary.
+\end{rem}
+
+\begin{figure}[ht]
+    \centering
+	\incfig[.6]{real-projective-plane}
+    \caption{Real Projective Plane}
+    \label{fig:real-projective-plane}
+\end{figure}
+
+\begin{lem}
+	Any $(n-1)$-dimensional projective subspace $W$ in $\PP^n(K)$ can be chosen as the hyperplane at infinity.
+\end{lem}

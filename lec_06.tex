@@ -1,0 +1,59 @@
+\newpage
+\section{Projective Spaces}
+\lecture{6}{March 01, 2021}{Let's start do definitions}
+
+Let $K$ be a field (in practice, for this class, $K = \RR$ or $\CC$).
+
+\begin{thm}[$n$-dimension Projective Space]
+	Given $n \in \ZZ_{\ge 0}$, the projective $n$-dimension space over $K$, denoted by $\PP^n(K)$, is defined as the set \[
+		\PP^n(K) = \{A \subset K^{n+1} : A \text{ is a subspace of } K^{n+1} \text{ with dimension }1 \text{over $K$} \}	
+	\]
+\end{thm}
+
+\paragraph{Small, informal aside:} $\PP^n(K)$ is more than just a set. It is a topological space --- more on this soon.
+
+\begin{exmp}
+	$\PP^1(\RR)$ is the set of lines in $\RR^2$ that go through the origin.
+
+	We can try to use the blue circle to ``keep track'' of the lines.
+\end{exmp}
+
+\begin{figure}[ht]
+    \centering
+    \incfig{projective-real-line}
+    \caption{Projective real line}
+    \label{fig:projective-real-line}
+\end{figure}
+
+\begin{exmp}
+	$\PP^2(\RR)$ is the set of lines in $\RR^3$ that go through the origin. 
+
+	We can try to use the unit sphere to ``keep track'' of the lines.
+\end{exmp}
+
+\begin{defn}
+	If $U$ is a $(r+1)$-dimensional subspace of $K^{n+1}$, then the $1$-subspaces of $U$ yield a subset of $\PP^n(K)$, and called a $r$-dimension projective subspace.
+\end{defn}
+
+\begin{prop}
+	Any $r$-dimension projective subspace is naturally a copy of $\PP^r(K)$ inside of $\PP^n(k)$.
+\end{prop}
+\begin{dem}
+	Any two $r$-dimension subspaces of $K^{n+1}$ are related by an isomorphism of  $K^{n+1} \to K^{n+1}$ (change of basis). Notice also that  $K^{r+1} \subset K^{n+1}$, corr. to zero-ing out the last  $n-r$ coordinates is an $(r+1)$-subspace of $K^{n+1}$. And its $1$-subspaces are the elements of $\PP^r(K)$, by definition.
+\end{dem}
+
+\begin{defn}
+	If a vector space $V$ has dimension $n$, and $U \subset V$ is a subspace, the \emph{co-dimension of $U$}, denoted $\cod(U)$, is  \[
+		\cod(U) = n - \dim(U).
+	\]
+\end{defn}
+
+\begin{lem}
+	Let $S_1, S_2$ be any two projective subspaces of $\PP^n(K)$. Then, \[
+		\cod(S_1 \cap S_2) \le \cod(S_1) + \cod(S_2).
+	\]
+
+	Equivalentely, \[
+		\dim(S_1 \cap S_2) \ge \dim(S_1) + \dim(S_2) - n.
+	\]
+\end{lem}

@@ -6,28 +6,46 @@
 %\usepackage{lmodern}
 \usepackage[margin=2.5cm]{geometry}
 \usepackage{hyperref}
-\usepackage[section, boxed, prob-boxed]{zeus}
+\usepackage[section, boxed, prob-boxed, dem-boxed]{zeus}
 \usepackage{mathtools}
 \usepackage[only, mapsfrom]{stmaryrd}
 \usepackage{parskip}
 \setlist{nosep, noitemsep, label = (\textit{\roman*})}
+\usepackage{todonotes}
 
-\title{\sffamily \bfseries MATH H333 (Algebra I) Lecture Notes}
+\title{\sffamily \bfseries Algebraic Geometry\\Lecture Notes}
 \author{\sc Guilherme Zeus Dantas e Moura\\\href{mailto:gdantasemo@haverford.edu}{\texttt{gdantasemo@haverford.edu}}}
 \date{Haverford College\\Spring 2021\\ Last updated: \today}
 
 \newcommand{\lecture}[3]{
-	\newpage
-	\section{#3 (#2)}
+	%\newpage
+	%\section{#3 (#2)}
+	\todo[bordercolor = gray!30!white, backgroundcolor = gray!30!white, noline]{\scalebox{.65}{\sf #2}}
 }
 
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{xcolor}
+
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+
+\newcommand{\correct}[2]{\textcolor{Red!90!black}{\st{#1}} \textcolor{ForestGreen}{#2}}
+\newcommand{\signexpl}[3]{\underset{\substack{\uparrow\\\mathrlap{\text{\hspace{#3}#2}}}}{#1}}
+
 \DeclareMathOperator\Aut{Aut}
+\DeclareMathOperator\Hom{Hom}
+\DeclareMathOperator\Tr{Tr}
+\DeclareMathOperator\cod{cod}
 
 \begin{document}
     \maketitle
 	\sloppy
 	
-		This is Haverford College's undergraduate MATH H334, instructed by Tarik Aougab.
+		This is Haverford College's undergraduate MATH H334, officially named Algebra II, instructed by Tarik Aougab.
 		All errors are my responsability.
 
 		Use these notes only as a guide. There is a non-trivial chance that some things here are wrong or incomplete (especially proofs).
@@ -37,5 +55,12 @@
 		\tableofcontents
 
 	% start lectures
+    \input{lec_01.tex}
+    \input{lec_02.tex}
+    \input{lec_03.tex}
+    \input{lec_04.tex}
+    \input{lec_05.tex}
+    \input{lec_06.tex}
+    \input{lec_07.tex}
 	% end lectures
 \end{document}
