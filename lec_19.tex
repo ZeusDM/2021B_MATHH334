@@ -1,0 +1,19 @@
+\lecture{19}{April 02, 2021}{}
+
+\begin{figure}[htb]
+    \centering
+	\incfig[.8]{angles-are-preserved-in-holomorphic-functions.}
+    \caption{Angles are preserved in holomorphic functions.}
+    \label{fig:angles-holomorphic}
+\end{figure}
+
+\begin{prop}
+	Suppose $f: \mathbb{C} \to \mathbb{C}$ is holomorphic. Rewrite $f$ as \[
+		f(x+ iy) = u(x, y) + i\cdot v(x, y).
+	\]
+	Then, if we view $f$ as a function from $\mathbb{R}^2 \to \mathbb{R}^2$, via \[
+		f(x, y) = (u(x, y), v(x, y)),
+	\] its Jacobian matrix $\Jac f$ has orthogonal columns. So, $\Jac f$ is an orthogonal matrix. In especial, if $\vec a, \vec b \in \mathbb{R}^2$, then $\angle(\vec a, \vec b) = \angle(\Jac f \cdot \vec a, \Jac f \cdot \vec b)$.
+\end{prop}
+
+Therefore, holomorphic functions are approximated (to better and better accuracy) by orthogonal linear transformations. So long as $f' \neq 0$, this means that angles between curves are preserved, as seen in \cref{fig:angles-holomorphic}.

@@ -1,0 +1,22 @@
+\lecture{18}{March 31, 2021}{}
+
+\begin{defn}[Differentiable complex functions in one variable]
+	Let $f : \mathbb{C} \to \mathbb{C}$. Then, $f$ is called \emph{differentiable} or \emph{$\mathbb{C}$-differentiable} or \emph{holomorphic} if there exists a complex line through $(a, f(a)) \in \mathbb{C}^2$, given by some equation $y = f(a) + c(x-a)$ for some $c\in \mathbb{C}$ so that \[
+		\lim_{x \to a} \frac{f(x) - \left( f(a) + c \cdot (x-a) \right)}{x-a} = 0,
+	\]
+	with $x \in \mathbb{C}$. If this occurs, then the \emph{derivative} of $f$ at $a$ is $c$.
+\end{defn}
+
+\begin{thm}[Cauchy-Riemann equations]
+	Given $f : \mathbb{C} \to \mathbb{C}$, rewrite $f$ as \[
+		f(x + iy) = u(x, y) + i\cdot v(x, y),
+	\]
+	for all $x, y \in \mathbb{R}$ and some $u, v: \mathbb{R}^2 \to \mathbb{R}$. 
+
+	Then, $f$ is holomorphic at $z_0 = x_0 + iy_0 \in \mathbb{C}$ if, and only if, all of the following happen:
+	\begin{enumerate}[label = (\textit{\roman*})]
+		\item $u, v : \mathbb{R}^2 \to \mathbb{R}$ are differentiable at $(x_0, y_0)$.
+		\item \[\frac{\partial u}{\partial x} (x_0, y_0) = \frac{\partial v}{\partial y} (x_0, y_0) \text{\quad and \quad}
+			\frac{\partial u}{\partial y} (x_0, y_0) = -\frac{\partial v}{\partial x} (x_0, y_0).\]
+	\end{enumerate}
+\end{thm}

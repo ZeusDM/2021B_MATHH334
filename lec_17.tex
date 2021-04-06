@@ -1,0 +1,15 @@
+\lecture{17}{March 26, 2021}{}
+
+So, $f$ is differentiable at  $\vec a$ means that, near $\vec a$, $f$ is well approximated by a linear transformation defined by the matrix with partial derivatives $\frac{\partial f^i}{\partial x_j}$, i.e. \[
+	f(\vec a + \vec h) = f(\vec a) + 
+	\underbrace{
+	\begin{pmatrix}
+		\frac{\partial f^1}{\partial x_1} & \cdots & \frac{\partial f^1}{\partial x_n}\\
+		\vdots & \ddots & \vdots \\
+		\frac{\partial f^m}{\partial x_1} & \cdots & \frac{\partial f^m}{\partial x_n}\\
+\end{pmatrix}}_{\text{$\Jac f(\vec a)$, the jacobian matrix}}
+	\cdot \vec h + \lVert \vec h \rVert \  \rho(\vec h),
+	\]
+with $\rho(\vec h) \to \vec 0$ as $\vec h \to \vec 0$.
+
+Given a function $f: \mathbb{R}^n \to \mathbb{R}^m$, we can identity the notion of derivative of $f$ at $\vec a$ with $\Jac f(\vec a)$.

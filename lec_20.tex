@@ -1,0 +1,36 @@
+\lecture{20}{April 05, 2021}{}
+
+\begin{lem}[Chain rule]
+	If $f, g: K \to K$ are differentiable, then $f \circ g$ is differentiable and \[
+		(f \circ g)'(z) = f'(g(z)) \cdot g'(z).
+	\]
+\end{lem}
+
+The linear map that best approximates $f \circ g$ nearby $z$ is to multiply the number $g'(z)$ and then follow up by multiplying $f'(g(z))$.
+
+\begin{lem}[Chain rule]
+	Given $g: K^n \to K^m, f: K^m \to K^p$ and $f, g$ are both $K$-differentiable. Then $f \circ g: K^n \to K^p$ is differentiable, and \[
+		\Jac (f \circ g)(\vec z) = \Jac f (g(\vec z)) \cdot \Jac g(\vec z).
+	\]
+\end{lem}
+
+\subsection{Power series}
+
+\begin{defn}[Power series]
+	A power series is a function $f: U \to \mathbb{C}$, with $U$ being an open set, given by an expression of the form \[
+		f(z) = \sum_{n=0}^\infty a_nz^n,
+	\] i.e., given any $z_0 \in U$,  $\lim_{m\to \infty} \sum_{n = 0}^m a_nz_0^n$ exists, and we define $f(z_0)$ to be this value.
+\end{defn}
+
+\begin{defn}[Absolute convergence]
+	An expression of the form $\sum_{n=0}^\infty a_nz_0^n$ is said to \emph{converge absolutely} if $\sum_{n=0}^\infty ||a_nz_0^n|| < \infty$.
+\end{defn}
+
+\begin{prop}
+	For $z_0 \in \mathbb{C}$, if $\sum_{n=0}^\infty{a_nz_0^n}$ converges absolutely, then $\sum_{n=0}^\infty a_nz_0^n$.
+\end{prop}
+
+\begin{defn}[Radius of Convergenge]
+	Given $f(z) = \sum_{n=0}^\infty a_nz^n$, $f$ is said to have \emph{radius of convergence} $\rho \in [0,\infty]$ if $\rho$ is is the supremum of $\{ \sigma : \forall z \in \mathbb{C}, ||z|| < \sigma \implies  \sum_{n=0}^\infty a_nz^n \text{ converges}\}$.
+\end{defn}
+

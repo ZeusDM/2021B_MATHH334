@@ -1,0 +1,52 @@
+\newpage
+\section{Multivariable Calculus}
+\lecture{16}{March 24, 2021}{Complex Analysis}
+
+\begin{defn}[Differentiable functions in one variable]
+	Let $U \subset \mathbb{R}$ be an open subset and let $f: U \to \mathbb{R}$. Then, $f$ is called \emph{differentiable} at $a \in U$ if there exists a line through $(a, f(a)) \in \mathbb{R}^2$, given by some equation $y = f(a) + c (x-a)$ for some $c \in \mathbb{R}$ so that \[
+		\lim_{x \to a} \frac{f(x) - (f(a) + c\cdot(x-a))}{x-a} = 0.
+	\]
+	
+	If this occurs, then the \emph{derivative} of $f$ at $a$ is $c$.
+\end{defn}
+
+\begin{prop}[Basic rules of differentiation]
+	For any $f, g$ differentiable, it holds:
+	\begin{enumerate}[label = (\alph*)]
+		\item $(\lambda f)'(a) = \lambda \cdot f'(a)$;
+		\item $(f + g)'(a) = f'(a) + g'(a)$;
+		\item $(fg)'(a) = f'(a)g(a) + f(a)g'(a)$;
+		\item $(f/g)'(a) = \frac{g(x)f'(x) - f(x)g'(x)}{g(a)^2}$;
+		\item $(x^n)' = nx^{n-1}$.
+	\end{enumerate}
+\end{prop}
+
+\begin{defn}[Limit of a function]
+	Given $f: \mathbb{R}^n \to \mathbb{R}$, then $\lim_{\vec x \to \vec a}f(\vec x) = c$ means that given any $\epsilon > 0$, there exists $\delta >  0$ so that, for any $\vec{y}$ satisfying $d_{\mathbb{R}^n}(\vec a, \vec y) < \delta$, it holds $|f(\vec y) - c| < \epsilon$.
+\end{defn}
+
+\begin{defn}[Differentable functions from multiple variables to one variable]
+	Let $U \subset \mathbb{R}^n$ open, and $f: U \to \mathbb{R}$. Then, $f$ is \emph{differentiable} at $\vec{a} \in U$ if there exists a hyperplane through $(a_1, \dots, a_n f(\vec{a})) \in \mathbb{R}^{n+1}$, given by some equation of the form \[
+		x_{n+1} = f(a) + c_1(x_1 - a_1) + \cdots + c_n(x_n - a_n)
+	\] so that \[
+	\lim_{\vec x \to \vec a} \frac{f(x) - (f(a) + c_1(x_1 - a_1) + \cdots + c_n(x_n - a_n))}{|x_1 - a_1| + \cdots + |x_n - a_n|} = 0.
+	\]
+
+	If this occurs, then the \emph{derivative} of $f$ at $\vec a$ is $(c_1, \dots, c_n)$.
+\end{defn}
+
+Just as before, $c_i$ measures the ``instantaneous'' rate of change of $f$, as we move a little bit in the $x_i$ direction. These $c_i$'s are called \emph{partial derivatives} of $f$ at $\vec a$ and denoted by \[
+	c_i = \frac{\partial f}{\partial x_i}(\vec a) = f_{x_i}(\vec a).
+\]
+
+\begin{defn}[Limit of a function with multivariable output]
+	Given $f: \mathbb{R}^n \to \mathbb{R}^m$, then $\lim_{\vec x \to \vec a}f(\vec x) = \vec c$ means that given any $\epsilon > 0$, there exists $\delta >  0$ so that, for any $\vec{y} \in B_\delta(\vec a)$, it holds $f(\vec y) \in B_\epsilon$.
+\end{defn}
+
+\begin{defn}[Differentable functions from multiple variables to one variable]
+	Let $U \subset \mathbb{R}^n$ open, and $f: U \to \mathbb{R}^m$. We can consider the \emph{coordinate functions} $f^1, \dots, f^m: U \to \mathbb{R}$ so that \[
+		f(\vec x) = (f^1(\vec x), \dots, f^m(\vec x)).
+	\]
+
+	Then, $f$ is differentiable at $\vec a$ if all $f^1, \dots, f^m$ are differentiable at $\vec a$.
+\end{defn}

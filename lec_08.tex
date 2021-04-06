@@ -1,0 +1,19 @@
+\lecture{8}{March 05, 2021}{}
+
+% DEFINE AFFINE PART
+
+Once we choose a hyperplane at infinty, we denote it by $\PP_\infty^{n-1}(K)$.
+
+\begin{lem}
+	Let $\PP^{n-1}_i(K)$ denote the projective subspace of $\PP^n(K)$ whose projective points lie on the hyperplane  $x_i = 0$. Then \[
+		\PP^n(K) = \bigcup_{i=1}^{n+1} \left(\PP^n(K) \setminus \PP^{n-1}_i(K)\right).
+	\]
+
+	In other words, the affine parts of $\PP^n(K)$ associated to the choices of $x_i = 0$ $(i = 1, \dots, n+1)$ as the hyperplane at infinity, jointly cover all of $\PP^n(K)$.
+\end{lem}
+
+\begin{dem}
+	$\PP^n(K) \setminus \PP^{n-1}_i$ counts every line, but those entirely contained in the hyperplane $x_i = 0$.
+	Thus, we only miss the points contained in all hyperplanes $x_i = 0$,  $i = 1, \dots, n+1$; which is no line.
+\end{dem}
+

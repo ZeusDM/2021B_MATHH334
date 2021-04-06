@@ -1,0 +1,43 @@
+\lecture{9}{March 8, 2021}{}
+
+\subsection{Projective completion}
+
+\begin{defn}[Homogenieous subset]
+	A \emph{homogeneous subset} $S$ of $K^n$ us any subset satisfying  \[
+		x \in S \implies cx \in S, \forall c \in K.
+	\]
+
+	Another way to think about this: A homogeneous subset is a union of lines through the origin.
+\end{defn}
+
+\begin{defn}[Homogeneous variety]
+	A \emph{homogeneous variety} $V$ in $K^n$ is an algebraic variety that is also homogeneous.
+\end{defn}
+
+\begin{defn}[Projective variety]
+	A \emph{projective variety} $V$ in $ \mathbb{P}^n(K)$ corresponding to all $1$-subspaces of $K^{n+1}$ lying in a homogeneous variety.
+\end{defn}
+
+\begin{defn}[Projective completion]
+	Let's embed $K^n$ in $K^{n+1}$, by setting the last variable to $1$. Then, in some sense, we are embedding $K^n$ in $ \mathbb{P}^n(K)$. Let $V$ be in $K^n$, and be an algebraic variety. Then, the \emph{projective completion} of $V$, denoted by $\overline V$ is the smallest projective variety in $ \mathbb{P}^n(K)$ containing $V$.
+\end{defn}
+
+We'll need some theorems and propositons to study the variety $V(z - x^3)$.
+
+\begin{thm}[Bézout]
+	The projective completion of a variety, $V(p)$ in $\PP^2(\CC)$, intersects any complex line  $n$ times, counting multiplicity, where $n = \deg(p)$.
+\end{thm}
+
+\begin{prop} \label{l03.08:prop:intersections}
+	Under certain circumstances, we'll be able to conclude that all of those intersections occur within the real part of $\CC^2$ (after adding in points at infinity).
+
+	If $\CC^2 = \{(x, z) = (x_1 + ix_2, z_1 + iz_2) : x_1, x_2, z_1, z_2 \in \RR\}$, then the real part of  $\CC^2$ is the $x_1z_1$-plane.
+\end{prop}
+
+\begin{prop}
+	Give any (real) line $L$ through origin in the $x_1z_1$-plane, there exists a unique complex line in $\CC^2$ containing $L$. Futhermore, if $L, L'$ are two distinct lines through the origin, then the corresponding complex lines containing each are not equal.
+\end{prop}
+
+Therefore, in $\PP^2(C)$, the real part of $\CC^2$ turns into a copy of  $\PP^2(\RR)$.
+
+The circumstances alluded to in \cref{l03.08:prop:intersections} arise when $p(x, z) = z - x^3$ and the complex line is the unique one intersecting the real part of  $\CC^2$ in the $z_1$-axis.
