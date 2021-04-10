@@ -31,6 +31,10 @@ The linear map that best approximates $f \circ g$ nearby $z$ is to multiply the 
 \end{prop}
 
 \begin{defn}[Radius of Convergenge]
-	Given $f(z) = \sum_{n=0}^\infty a_nz^n$, $f$ is said to have \emph{radius of convergence} $\rho \in [0,\infty]$ if $\rho$ is is the supremum of $\{ \sigma : \forall z \in \mathbb{C}, ||z|| < \sigma \implies  \sum_{n=0}^\infty a_nz^n \text{ converges}\}$.
+	Given $f(z) = \sum_{n=0}^\infty a_nz^n$, $f$ is said to have \emph{radius of convergence} $\rho \in [0,\infty]$ if $\rho$ is is the supremum of $\{ \sigma : \forall z \in \mathbb{C}, ||z|| < \sigma \implies  \sum_{n=0}^\infty a_nz^n \text{ converges absolutely}\}$.
 \end{defn}
+
+\begin{prop}
+	The radius of convergence $\rho$ is $\sup\{t \ge 0 \mid \{|a_n|t^n\}_{n=0}^\infty \text{ is a bounded sequence}\}$.
+\end{prop}
 

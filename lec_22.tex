@@ -1,0 +1,52 @@
+\lecture{22}{April 09, 2021}{}
+
+\begin{thm}
+	Any holomorphic function on $\mathbb{C}$ can be differentiated any finite number of times.
+\end{thm}
+
+\subsection{Integration}
+
+\begin{defn}[Real-to-Complex Integral]
+	Given $f: [a, b] \to \mathbb{C}$ continous. Define \[
+		\int_a^b f(t) \,d{t} = \int_a^b \mathrm{Re}[f(t)] \,dt + i \int_a^b \mathrm{Im}[f(t)] \,dt
+	\]
+\end{defn}
+
+\begin{defn}[Curve]
+	A \emph{curve} in $\mathbb{C}$ is a continous function $\gamma: [a, b] \to \mathbb{C}$. A curve is called \emph{closed} if $\gamma(a) = \gamma(b)$. A curve is \emph{simple} if $\gamma\big|_{(a, b)}$ is one-to-one and $\gamma(c) \neq \gamma(a)$ or $\gamma(b)$ for any $c \in (a, b)$. A \emph{Jordan curve} is an simple and closed curve.
+
+	We denote $\gamma^* = g([a, b])$, together with an orientation.
+\end{defn}
+
+\begin{defn}[Countour Integration]
+	Let $\gamma: [a, b] \to \mathbb{C}$ be a curve so that $\gamma'(t)$ exists and is continous.
+	Then, if  $f: \mathbb{C} \to \mathbb{C}$, the \emph{countour integral} or \emph{path integral} of $f$ along $\gamma$ by \[
+		\int_\gamma f := \int_a^b f(\gamma(t)) \gamma'(t) \,dt.
+	\]
+\end{defn}
+
+Some comments:
+\begin{enumerate}
+	\item $\int_\gamma f$ often depends only on $\gamma^*$.
+	\item If $-\gamma$ denotes performing $\gamma$ byt in the opposite direction, then \[
+			\int_{-\gamma} f = -\int_{\gamma} f.
+	\]
+\end{enumerate}
+
+\begin{thm}[Cauchy's integral theorem]
+	Suppose $f: U \to \mathbb{C}$, $U \subset \mathbb{C}$ open, and $f$ is holomorphic. Let $\gamma: [a, b] \to U$ be simple and closed. Then, \[
+		\int_\gamma f = 0.
+	\]
+\end{thm}
+
+\begin{thm}[Cauchy's integral formula]
+	Let $f: U \to \mathbb{C}$ holomorphic, with $U$ open. Let $\gamma$ be any circle lying in $U_1$ bounding some disk in $D$. Given $w \in D$. \[
+		f(w) = \frac{1}{2\pi i}\int_\gamma \frac{f(z)}{z-w} \,dz
+	\]
+\end{thm}
+
+\begin{thm}[Cauchy's Argument Principle]
+	In the context of above. Assume $f(z) \neq 0, \forall z \in \gamma^*$ and assume there are $N$ point in $D$ where $f$ is zero. Then, \[
+		\frac{1}{2 \pi i} \int_\gamma \frac{f'(z)}{f(z)} \,dz = N.
+	\]
+\end{thm}
