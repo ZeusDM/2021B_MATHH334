@@ -1,0 +1,32 @@
+\newpage
+\section{Topology}
+\lecture{23}{April 12, 2021}{Topology}
+
+\begin{prop}
+	If $M \subset \mathbb{R}^n$ is an $m$-manifold, and $x \in M$, then there exists a way to partition the  $n$ variables $\{x_1, \dots, x_n\}$ into two subsets, $\{x_{i_1}, \dots, x_{i_m}\}$ and $\{x_{j_1}, \dots, x_{j_{n-m}}\}$, and a continous function $f$ from an open subset $V$ of $\mathbb{R}^m$ to $\mathbb{R}^{n-m}$, so that there exists an open set $U$ around $x \in M$ and with \[U = \{(x_1, \dots, x_n) : f(x_{i_1}, \dots, x_{i_m}) = (x_{j_1}, \dots, x_{j_{n-m}})\}.\]
+\end{prop}
+
+\begin{defn}
+	Also, if on the above definition, if for each $x \in M$, we can choose $f$ to be a smooth function, $M$ is called a smooth manifold.
+	(\emph{Small lie: there shouls also be something said about how the $f$'s change from point to point in order to say that $M$ itself is ``smooth'' but we'll ignore this for now.})
+\end{defn}
+
+Let's apply this perspective to $V(p)$, $p \in \mathbb{C}[x, y]$. We expect a variety to look like a manifold whenever the derivative of the defining polynomial doesn't vanish.
+
+\begin{defn}
+	Suppose $f: \mathbb{C} \to \mathbb{C}$ is holomorphic at $a$. Then, \emph{$a$ is a zero of order $n$} if there exists some $h: \mathbb{C} \to \mathbb{C}$ holomorphic at $a$, so that
+	\begin{enumerate}
+		\item $f(x) = (x-a)^n h(x)$
+		\item $h(a) \neq 0$
+	\end{enumerate}
+\end{defn}
+
+\begin{thm}\label{thm:graph-holomorphic}
+	Suppose $p(x, y) \in \mathbb{C}[x, y]$ such that
+	\begin{enumerate}[label = (\alph*)]
+		\item $p(0, 0) = 0$;
+		\item $\frac{\partial p}{\partial y} (0, 0) \neq 0$.
+	\end{enumerate}
+
+	Then, there exists an open ball $B$ centered at $(0, 0)$ such that $B \cap V(p)$ is the graph of a function $\phi: \mathbb{C}_x \to \mathbb{C}_y$, which is holomorphic at $0 \in \mathbb{C}_x$.
+\end{thm}

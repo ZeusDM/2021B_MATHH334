@@ -1,0 +1,62 @@
+\lecture{24}{April 14, 2021}{}
+
+\begin{sk}[of the proof of Theorem \ref{thm:graph-holomorphic}]
+	This proof will be devided into two steps. First, we'll find the desired $\phi: \mathbb{C}_x \to \mathbb{C}_y$. Secondly, we'll prove it is holomorphic at $0 \in \mathbb{C}_x$.
+
+	The polynomial $p(0, y)$ has a zero at $y=0$ of order $1$. Thus, if $\tilde{B}$ is a suficiently small open ball about $0 \in \mathbb{C}_y$, there are no other zeros in $\tilde{B}$, so the argument principle implies that \[
+		\frac{1}{2\pi i} \int_{\partial \tilde{B}} \frac{\frac{\partial p}{\partial y}(0, y)}{p(0, y)} dy = 1.
+	\]
+
+	Also, if $c \in \mathbb{C}_x$ very close to $0 \in \mathbb{C}_x$, \[
+		\frac1{2\pi i} \int_{\partial \tilde{B}} \frac{\frac{\partial p}{\partial y}(c, y)}{p(c, y)} dy
+	\] has to be very close to $1$, by continuity of the output of this contour integral as a function of the inputs involved.
+
+	Trick: Choose $c$ \underline{so small} so that the argument principle still applies, i.e., for $c$ sufficiently tiny, $p(0, y)$ having no zeros on $\partial \tilde{B}$ $\implies$ $p(c, y)$ has no zeros on  $\partial \tilde{B}$ either. (Key point: Any continous function achieces a minimum on a compact set, and $\partial \tilde{B}$ is a compact set.)
+
+	So, \[
+		\frac{1}{2\pi i} \int_{\partial \tilde{B}} \frac{\frac{\partial p}{\partial y}(0, y)}{p(0, y)} dy \in \mathbb{N},
+	\] and it is close to $1$. Thus, $p(c, y)$ has exactly $1$ zero inside $\tilde{B}$. Define, for such $c$, $\phi(c) :=$ this zero.
+
+	Note that, for $x \in \mathbb{C}_x$ close to $0$,  $(x, \phi(x)) \in V(p)$, since by plugging $Y \mapsto \phi(x)$ into $p(x, Y)$, we get zero.
+
+	From the first part of our argument, we know that there are open balls $U \subset \mathbb{C}_x$, centered at $0 \in \mathbb{C}_x$, and $\Delta \subset \mathbb{C}_y$ so that \[
+		\forall c \in U, p(c, y) \text{ has a unique root in } \Delta,
+	\]
+	and it's of order $1$.
+
+	Consider the function \[
+		\frac{\frac{\partial p}{\partial y}(c, y)}{p(c, y)}.
+	\]
+
+	At least within $\Delta$, we can express this as a rational Taylor series of the form \[
+		\frac{\frac{\partial p}{\partial y}(c, y)}{p(c, y)} = \frac{a_0 + a_1 (y - \phi(c)) + a_2(y - \phi(c))^2 + \cdots}{y - \phi(c)}.
+	\]
+
+	Note that $a_0 \neq 0$, because  $a_0 = 0 \implies {\frac{\partial p}{\partial y}(c, \phi(c))} = 0$, which is a contradiction.
+
+	Then,
+	\begin{align*}
+		\frac{1}{2\pi i} \int_{\partial \Delta} \frac{y \frac{\partial p}{\partial y}(c,y)}{y-\phi(c)} dy
+		&= \frac{1}{2\pi i} \int_{\partial \Delta} \frac{ya_0 + a_1y(y - \phi(c)) + a_2y(y - \phi(c))^2 + \cdots}{y-\phi(c)} dy \\
+		&= a_0 \phi(c),
+	\end{align*}
+	by Cauchy's integral formula.
+
+	By using the same continuity arguments we used in the first part of our argument, we can conclude that when $x$ is sufficiently close to $0$, $p(x, y) \neq 0$ for any $y \in \partial \Delta$.
+
+	So, close by to $\partial \Delta$, we can express $\frac{\frac{\partial p}{\partial y}(x, y)}{p(x, y)}$ as a power series of the form $\sum_{n=0}^\infty g_n(y)x^n$.
+
+	Each of these coefficients, $g_n(y)$, are themselved holomorphic functions of $y$ in the boundary of this ball. And because of the well-behavedness of holomorphic functions, we can integrate term by term. Thus, 
+	\begin{align*}
+		\phi(c)
+		&= \frac{1}{2a_0\pi i} \int_{\partial \Delta} \frac{y \frac{\partial p}{\partial y}(c, y)}{p(c, y)} dy \\
+		&= \sum_{n=0}^\infty \left( \int_{\partial\Delta} g_n(y) dy \right) c^n \\
+		&= \sum_{n=0}^\infty b_nc^n. 
+	\end{align*}
+\end{sk}
+
+%\begin{prop}
+%	If $f, g$ are holomorphic and $f$ has $z_0$ a unique root, of order $m$, then, \[
+%		\frac{g(x)}{f(x)} = \frac{a_0 + a_1(z-z_0) + \dots}{(z-z_0)^m}
+%	\]
+%\end{prop}
